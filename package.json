@@ -4,9 +4,10 @@
   "description": "",
   "main": "hamedal-http-server-app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./hamedal-http-server-app.js"
   },
-  "author": "",
+  "author": "auditoryworks",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",

@@ -35,7 +35,10 @@ server.get('/hamedal/falcon/AIMode', async function (request, response) {
             }
         }
     }
-    response.send({enabled: isEnabled == 1})
+    response.send({
+        SN:request.query.sn,
+        enabled: isEnabled == 1
+    })
 })
 
 server.get('/hamedal/falcon/setAIMode', async function (request, response) {
@@ -66,7 +69,10 @@ server.get('/hamedal/falcon/setAIMode', async function (request, response) {
             }
         }
     }
-    response.send({enabled: isEnabled == 1})
+    response.send({
+        SN:request.query.sn,
+        enabled: isEnabled == 1
+    })
 })
 
 server.get('/hamedal/falcon/peopleCount', async function (request, response) {
@@ -90,7 +96,10 @@ server.get('/hamedal/falcon/peopleCount', async function (request, response) {
             }
         }
     }
-    response.send({peopleCount: count})
+    response.send({
+        SN:request.query.sn,
+        peopleCount: count
+    })
 })
 
 port = 9008;
