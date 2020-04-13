@@ -61,7 +61,7 @@ Return:
 #### 2.Get if falcon camera AIMode is enabled
 We should use device serial number to confirm which camera to query:
 ```http request
-/hamedal/falcon/AIMode?sn=[device SN info]
+/hamedal/falcon/AIMode?sn=[device SN]
 ```
 Example
 ```http request
@@ -77,7 +77,7 @@ Return
 
 #### 3.Set falcon camera AIMode enabled or disabled
 ```http request
-/hamedal/falcon/setAIMode/?sn=[device serial number]&enable=[true or false]
+/hamedal/falcon/setAIMode/?sn=[device SN]&enable=[true or false]
 ```
 Example:
 ```http request
@@ -87,13 +87,13 @@ Return
 ```json
 {
     "SN":"1234567890asdf",
-    "enabled":true
+    "enabled":false
 }
 ```
 
 #### 4.Get falcon camera people count 
 ```http request
-/hamedal/falcon/peopleCount/?sn=[serial number]
+/hamedal/falcon/peopleCount/?sn=[device SN]
 ```
 Example:
 ```http request
@@ -102,7 +102,7 @@ http://localhost:9008/hamedal/falcon/peopleCount/?sn=1234567890asdf
 Return:
 ```json
 {
-  "SN":"invalid",
+  "SN":"1234567890asdf",
   "peopleCount":1
 }
 ```
