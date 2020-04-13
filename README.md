@@ -44,7 +44,7 @@ Return:
     "Brand":"Hamedal",
     "InnerModel":"Falcon",
     "OuterModel":"V20",
-    "SN":"invalid",
+    "SN":"1234567890asdf",
     "version":"1.100.0.2",
     "firmware":"Hamedal_V20"}],
   "Audio":[

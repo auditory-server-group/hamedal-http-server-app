@@ -1,6 +1,6 @@
 {
   "name": "hamedal-http-server-app",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "",
   "main": "hamedal-http-server-app.js",
   "scripts": {
@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "hamedal-sdk": "^2.0.0"
+    "hamedal-sdk": "^2.1.2"
   }
 }
