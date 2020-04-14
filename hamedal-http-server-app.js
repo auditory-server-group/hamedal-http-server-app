@@ -3,6 +3,22 @@ var hamedal = require('hamedal-sdk')
 
 var server = express()
 
+//0. 引导界面
+server.get('/', function (request, response) {
+    let inter = {
+        getDevicesList:"http://localhost:9008/hamedal/devices",
+        getCameraStatus:"http://localhost:9008/hamedal/falcon/AIMode?sn=1234567890asdf",
+        setCameraStatus:"http://localhost:9008/hamedal/falcon/setAIMode/?sn=1234567890asdf&enable=false",
+        getPeopleCount:"http://localhost:9008/hamedal/falcon/peopleCount/?sn=1234567890asdf"
+    }
+    let example = {
+        example_interface: inter,
+        readme: "https://github.com/auditory-server-group/hamedal-http-server-app"
+    }
+
+    response.send(example)
+})
+
 //1. 获取设备列表
 server.get('/hamedal/devices', async function (request, response) {
     let Camera = await hamedal.listFalconDevInfo();
